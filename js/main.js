@@ -2,26 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initVideoFacade();
     initFAQ();
     registrarPageView();
-    //scrollToVideo();
+
 });
 
-/**
- * Automatically scrolls to the video section on load if no specific hash is present.
-*/
-function scrollToVideo() {
-    if (!window.location.hash) {
-        const videoSection = document.getElementById('video');
-        if (videoSection) {
-            // instant jump behavior to look like they loaded directly on it
-            videoSection.scrollIntoView({ behavior: 'auto' });
-        }
-    }
-}
-
-/**
- * Inits the Video Facade pattern.
- * Replaces the facade element with the actual Moodle iframe when clicked.
- */
 function initVideoFacade() {
     const videoFacade = document.getElementById('videoFacade');
     if (!videoFacade) return;
